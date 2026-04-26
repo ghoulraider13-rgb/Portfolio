@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-void: #080c18;
+  --color-deep: #0b1120;
+  --color-abyss: #0f172a;
+  --color-panel: #111827;
+  --color-slate: #1e293b;
+  --color-smoke: #283348;
+  --color-ash: #94a3b8;
+  --color-mist: #c8d1de;
+  --color-chalk: #e2e8f0;
+  --color-snow: #f1f5f9;
+  --color-pure: #ffffff;
+  --color-accent: #6c5ce7;
+  --color-accent-bright: #a29bfe;
+  --color-accent-dim: #4834d4;
+  --color-electric: #38bdf8;
+  --color-success: #34d399;
+  --color-danger: #f87171;
+  --color-danger-dim: rgba(248,113,113,0.12);
+  --color-glass: rgba(14,20,38,0.60);
+  --color-glass-border: rgba(108,92,231,0.10);
+  --font-serif: 'DM Serif Display', 'Georgia', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--color-smoke) var(--color-deep); }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-void);
+  color: var(--color-snow);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+h1, h2, h3, .serif { font-family: var(--font-serif); }
+
+::selection { background: var(--color-accent); color: var(--color-pure); }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-deep); }
+::-webkit-scrollbar-thumb { background: var(--color-smoke); border-radius: 3px; }
+
+/* ── Custom Cursor — dot + trailing ring ── */
+.cursor-dot {
+  position: fixed; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--color-accent-bright);
+  pointer-events: none; z-index: 10000;
+  transform: translate(-50%, -50%);
+  will-change: left, top;
+}
+.cursor-ring {
+  position: fixed; width: 36px; height: 36px; border-radius: 50%;
+  border: 1.5px solid var(--color-accent);
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+  will-change: left, top;
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+}
+.cursor-ring.expanded { width: 52px; height: 52px; border-color: var(--color-accent-bright); }
+
+/* ── Cursor Glow — radial ambient light following cursor ── */
+.cursor-glow {
+  position: fixed;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  will-change: left, top;
+  background: radial-gradient(circle, rgba(108,92,231,0.08) 0%, rgba(162,155,254,0.04) 40%, transparent 70%);
+  filter: blur(20px);
+  transition: opacity 0.3s;
+}
+/* Intensify glow when over frosted glass elements */
+.cursor-glow.over-glass {
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(108,92,231,0.14) 0%, rgba(162,155,254,0.07) 40%, transparent 70%);
+}
+
+/* ── When cursor is over text, switch to native text cursor ── */
+p, span, h1, h2, h3, h4, h5, h6, li, a, label,
+[class*="text-"], .serif {
+  cursor: none;
+}
+/* Use text cursor on actual text content */
+p:hover, span:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
+li:hover, label:hover {
+  cursor: text;
+}
+a:hover, button:hover, [data-hover]:hover {
+  cursor: none;
+}
+
+/* ── Glass Card — enhanced frosted glass ── */
+.glass-card {
+  background: rgba(14,20,38,0.50);
+  border: 1px solid rgba(255,255,255,0.07);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 20px;
+  padding: 28px 28px;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.glass-card:hover {
+  border-color: rgba(108,92,231,0.22);
+  box-shadow: 0 0 40px rgba(108,92,231,0.04);
+}
+
+/* ── Frosted Glass — strong variant for project cards ── */
+.frosted-glass {
+  background: rgba(30, 41, 59, 0.40);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 28px 28px;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+.frosted-glass:hover {
+  border-color: rgba(108,92,231,0.25);
+  background: rgba(30, 41, 59, 0.50);
+  box-shadow: 0 8px 48px rgba(108,92,231,0.06);
+}
+
+/* ── Neural Canvas ── */
+#neural-canvas {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0; pointer-events: none;
+}
+
+/* ── Section spacing — generous ── */
+.section { position: relative; z-index: 1; }
+.section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 28px 80px;
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-pure), var(--color-accent-bright), var(--color-accent));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+/* ── Violet text-shadow glow (for skills, coursework, semester, year) ── */
+.glow-text {
+  text-shadow: 0 0 8px rgba(108,92,231,0.55), 0 0 20px rgba(108,92,231,0.25);
+}
+
+/* ── Binary Rain — continuous dripping within card ── */
+@keyframes binaryRainDrop {
+  0%   { opacity: 0; transform: translateY(-10px); }
+  10%  { opacity: 0.7; }
+  90%  { opacity: 0.3; }
+  100% { opacity: 0; transform: translateY(100%); }
+}
+
+.binary-rain-char {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  pointer-events: none;
+  opacity: 0;
+  color: var(--color-accent-bright);
+  animation: binaryRainDrop linear forwards;
+  text-shadow: 0 0 6px rgba(108,92,231,0.4);
+}
+
+/* ── Interactive Pills ── */
+.glow-pill {
+  transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, border-color 0.3s;
+}
+.glow-pill:hover {
+  box-shadow: 0 0 15px rgba(108, 92, 231, 0.6);
+  transform: scale(1.05);
+  border-color: rgba(108, 92, 231, 0.8);
+}
+
+/* ── Cyberpunk Resume Button ── */
+.resume-btn-cyber {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(108,92,231,0.3);
+  background: rgba(108,92,231,0.05);
+  transition: all 0.3s ease;
+}
+.resume-btn-cyber::before, .resume-btn-cyber::after {
+  content: '';
+  position: absolute;
+  background: var(--color-accent-bright);
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+/* Circuit wire top-left */
+.resume-btn-cyber::before {
+  width: 14px; height: 1.5px; top: 0px; left: -14px;
+}
+/* Circuit wire bottom-right */
+.resume-btn-cyber::after {
+  width: 1.5px; height: 14px; bottom: -14px; right: 0px;
+}
+.resume-btn-cyber:hover {
+  box-shadow: 0 0 15px rgba(108,92,231,0.5), inset 0 0 12px rgba(108,92,231,0.2);
+  border-color: rgba(108,92,231,0.9);
+  background: rgba(108,92,231,0.15);
+}
+.resume-btn-cyber:hover::before { left: 8px; }
+.resume-btn-cyber:hover::after { bottom: 8px; }
+
+/* ── Contact Divider ── */
+.contact-divider {
+  position: absolute;
+  left: 0; right: 0; top: 40px; /* Aligned roughly below icons / above text */
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08) 20%, rgba(255,255,255,0.08) 80%, transparent);
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  body { cursor: auto; }
+  .cursor-dot, .cursor-ring, .cursor-glow { display: none !important; }
+  p:hover, span:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover,
+  li:hover, label:hover { cursor: auto; }
+}
+
+@media (max-width: 768px) {
+  .section-inner { padding: 72px 18px 48px; }
+}

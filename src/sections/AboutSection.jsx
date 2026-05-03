@@ -58,7 +58,7 @@ function AboutSection() {
                   <div>
                     <h4 className="text-pure font-semibold text-[16px]">Jain University</h4>
                     {/* INCREASED: Slightly bumped mt-1 to mt-1.5 and mt-2 to mt-2.5 to let the text breathe */}
-                    <p className="text-accent-bright text-sm font-medium mt-1.5">B.Tech in CSE — AI Driven DevOps</p>
+                    <p className="text-accent-bright text-sm font-medium mt-2.5">B.Tech in CSE — AI Driven DevOps</p>
                     <p className="text-snow text-xs mt-2.5">
                       <span className="glow-text font-medium">2024 – 2028</span>
                       <span className="text-ash mx-2">•</span>

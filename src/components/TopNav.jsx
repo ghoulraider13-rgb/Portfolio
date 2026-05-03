@@ -26,7 +26,7 @@ function LiveClock() {
   const isAvailable = status.startsWith('Available');
 
   return (
-    <div className="hidden lg:flex items-center gap-2.5 text-[11px] font-mono text-mist">
+    <div className="hidden lg:flex items-center gap-2.5 text-[14px] font-mono text-mist">
       <span className="text-snow">{time}</span>
       <span className="text-ash">|</span>
       <span className={`flex items-center gap-1.5 ${isAvailable ? 'text-success' : 'text-amber-400'}`}>
@@ -55,9 +55,8 @@ function TopNav({ onOpenResume }) {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2, duration: 0.5 }}
-      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-deep/75 backdrop-blur-xl border-b border-white/[0.04]' : ''
-      }`}
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-500 ${scrolled ? 'bg-deep/75 backdrop-blur-xl border-b border-white/[0.04]' : ''
+        }`}
     >
       <div className="w-full px-8 py-4 flex items-center justify-between">
         {/* Left — Logo + Live Clock */}
@@ -80,9 +79,10 @@ function TopNav({ onOpenResume }) {
               {l.label}
             </button>
           ))}
-          <button 
+          <button
             onClick={onOpenResume}
-            className="resume-btn-cyber px-8 py-3 ml-2 rounded-xl text-[14px] font-bold text-accent-bright uppercase tracking-widest flex items-center gap-2"
+            style={{ padding: '10px 28px', fontSize: '14px' }}
+            className="resume-btn-cyber ml-2 rounded-xl font-bold text-accent-bright uppercase tracking-widest inline-flex items-center gap-2 whitespace-nowrap"
             data-hover
           >
             Resume
@@ -109,8 +109,8 @@ function MobileMenu({ links, scrollTo, onOpenResume }) {
           {links.map((l) => (
             <button key={l.to} onClick={() => { scrollTo(l.to); setOpen(false); }} className="text-sm text-mist hover:text-pure text-left uppercase tracking-wide">{l.label}</button>
           ))}
-          <button 
-            onClick={() => { onOpenResume(); setOpen(false); }} 
+          <button
+            onClick={() => { onOpenResume(); setOpen(false); }}
             className="text-sm text-accent hover:text-accent-bright text-left uppercase tracking-wide mt-2 pt-2 border-t border-white/5"
           >
             Resume

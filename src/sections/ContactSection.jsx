@@ -5,11 +5,20 @@ import LinkedinIcon from '../components/LinkedinIcon';
 import RevealOnScroll from '../components/RevealOnScroll';
 
 const CONTACT = [
-  { icon: Mail, label: 'ghoul.raider13@gmail.com', href: 'mailto:ghoul.raider13@gmail.com' },
+  { icon: Mail, label: 'ashwinlahkar@gmail.com', href: 'mailto:ashwinlahkar@gmail.com' },
   { icon: LinkedinIcon, label: 'Connect with me', href: 'https://www.linkedin.com/in/ashwin-lahkar-08a9ab405/' },
   { icon: GithubIcon, label: 'ghoulraider13-rgb', href: 'https://github.com/ghoulraider13-rgb' },
   { icon: MapPin, label: 'Bengaluru, Karnataka', href: null },
 ];
+
+const handleOpen = (href) => {
+  if (!href) return;
+  if (href.startsWith('mailto:')) {
+    window.location.href = href;
+  } else {
+    window.open(href, '_blank', 'noopener,noreferrer');
+  }
+};
 
 function ContactSection() {
   return (
@@ -32,17 +41,26 @@ function ContactSection() {
             <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start gap-10 relative z-10">
               {CONTACT.map(({ icon: Icon, label, href }) => (
                 <div key={label} className="flex flex-col items-center gap-4 group">
-                  <div className="p-4 rounded-2xl bg-[#0e1426] border border-white/[0.06] text-accent group-hover:border-accent/40 group-hover:bg-accent/10 transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]">
-                    <Icon size={22} />
-                  </div>
+                  {/* Icon */}
+                  <button
+                    type="button"
+                    onClick={() => handleOpen(href)}
+                    disabled={!href}
+                    data-hover={href ? true : undefined}
+                    style={{ transition: 'box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease' }}
+                    className={[
+                      'p-4 rounded-2xl bg-[#0e1426] border text-accent shadow-[0_0_15px_rgba(0,0,0,0.5)]',
+                      href
+                        ? 'border-white/[0.06] cursor-pointer hover:border-accent/60 hover:bg-accent/10 hover:shadow-[0_0_18px_4px_rgba(109,77,255,0.45)]'
+                        : 'border-white/[0.06] cursor-default opacity-70',
+                    ].join(' ')}
+                  >
+                    <Icon size={28} />
+                  </button>
+
+                  {/* Label — plain text */}
                   <div className="text-center bg-black/40 px-3 py-1 rounded-lg backdrop-blur-sm border border-white/[0.02]">
-                    {href ? (
-                      <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined} className="text-snow text-[13px] hover:text-accent-bright transition-colors font-medium tracking-wide" data-hover>
-                        {label}
-                      </a>
-                    ) : (
-                      <span className="text-snow text-[13px] font-medium tracking-wide">{label}</span>
-                    )}
+                    <span className="text-snow text-[13px] font-medium tracking-wide">{label}</span>
                   </div>
                 </div>
               ))}

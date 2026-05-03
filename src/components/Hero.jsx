@@ -46,7 +46,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-sm"
         >
-          <span className="w-2 h-2 rounded-full bg-success animate-pulse" />
+          <span className="w-8 h-8 rounded-full bg-success animate-pulse" />
           <span className="text-xs font-mono text-mist tracking-wider uppercase">
             Available for opportunities
           </span>

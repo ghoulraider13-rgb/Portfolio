@@ -14,11 +14,14 @@ canvas background, custom glow cursor, binary-rain skill cards, and a dual-pane 
 ## ✨ Features
 
 - **Interactive neural-network canvas** — nodes drift and connect into synapses around the cursor
-- **Custom trailing glow cursor** (auto-disabled on touch devices)
-- **Binary-rain skill cards** — hover a skill and it emits 0s and 1s
-- **Dual-pane resume modal** — drag-and-drop a resume, live PDF/image preview, metadata pane
-- **Responsive multi-section layout** — Home, About, Skills, Projects, Contact
-- Built with React 19, Vite, Tailwind CSS 4, framer-motion, lucide-react icons, react-router-dom
+- **Custom trailing glow cursor** (auto‑disabled on touch devices)
+- **Binary‑rain skill cards** — hover a skill and it emits 0s and 1s
+- **Dual‑pane resume modal** — drag‑and‑drop a resume, live PDF/image preview, metadata pane
+- **Star project – Disaster Detection Drone** highlighted in the Projects section
+- **FloTask** – renamed from Flowtask, now the main productivity dashboard (Live link)
+- Added new project cards: **Sahayak** (privacy‑preserving browser agent), **Evolutionary Feature Selector**, and **FloTask** (AI‑powered task manager)
+- Updated resume PDF (single‑page, new projects, drone as star) linked in the Resume viewer
+- Built with React 19, Vite, Tailwind CSS 4, framer‑motion, lucide‑react icons, react‑router‑dom
 
 ## 🚀 Run locally
 

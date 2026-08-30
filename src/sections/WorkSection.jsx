@@ -5,6 +5,18 @@ import RevealOnScroll from '../components/RevealOnScroll';
 import BinaryRain from '../components/BinaryRain';
 
 const PROJECTS = [
+  // ★ Star project – disaster detection drone
+  {
+    title: 'Disaster Detection Drone',
+    subtitle: 'Aerial disaster detection for UAV SAR',
+    description: 'YOLOv11n models for flood, landslide, earthquake damage detection; ONNX, TensorRT, and OpenVINO edge deployment on Jetson-class UAVs; research paper with IEEE-style evaluation.',
+    tech: ['Python', 'YOLOv11n', 'ONNX', 'TensorRT', 'OpenVINO', 'Roboflow'],
+    icon: Layers,
+    link: 'https://github.com/ghoulraider13-rgb/Disaster_DetectionDrone',
+    badge: 'Star',
+    badgeColor: 'bg-accent/15 text-accent-bright',
+  },
+  // Existing Flowtask
   {
     title: 'Flowtask',
     subtitle: 'Productivity Dashboard',
@@ -15,6 +27,40 @@ const PROJECTS = [
     badge: 'Live',
     badgeColor: 'bg-success/15 text-success',
   },
+  // Sahayak privacy-preserving browser agent
+  {
+    title: 'Sahayak',
+    subtitle: 'Privacy-Preserving Browser Agent',
+    description: 'Chrome MV3 extension + FastAPI backend; PII redaction engine achieving 1.00 recall / 1.00 precision on adversarial tests (PS 26171).',
+    tech: ['Chrome MV3', 'FastAPI', 'React', 'Python'],
+    icon: Cpu,
+    link: 'https://github.com/ghoulraider13-rgb/Sahayak',
+    badge: 'Internal',
+    badgeColor: 'bg-amber-15 text-amber-600',
+  },
+  // Evolutionary Feature Selector
+  {
+    title: 'Evolutionary Feature Selector',
+    subtitle: 'Genetic feature selection for ML',
+    description: 'GA reduces feature set by 50% while raising RandomForest accuracy from 97.1% to 99.4% on the breast‑cancer dataset.',
+    tech: ['Python', 'Genetic Algorithms', 'scikit-learn'],
+    icon: Cpu,
+    link: 'https://github.com/ghoulraider13-rgb/evolutionary_feature_selection',
+    badge: 'Repo',
+    badgeColor: 'bg-success/15 text-success',
+  },
+  // FloTask AI‑powered task manager
+  {
+    title: 'FloTask',
+    subtitle: 'AI‑Powered Task Manager',
+    description: 'React + Vite + Gemini API; minimalist "Nothing OS" design for task scheduling and voice‑to‑text.',
+    tech: ['React', 'Vite', 'Gemini API'],
+    icon: Cpu,
+    link: 'https://github.com/ghoulraider13-rgb/FloTask',
+    badge: 'Repo',
+    badgeColor: 'bg-success/15 text-success',
+  },
+  // Portfolio website (self)
   {
     title: 'Portfolio Website',
     subtitle: 'Digital Workspace',

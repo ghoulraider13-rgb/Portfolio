@@ -16,9 +16,9 @@ const PROJECTS = [
     badge: 'Star',
     badgeColor: 'bg-accent/15 text-accent-bright',
   },
-  // Existing Flowtask
+  // FloTask – live productivity dashboard
   {
-    title: 'Flowtask',
+    title: 'FloTask',
     subtitle: 'Productivity Dashboard',
     description: 'A comprehensive productivity dashboard with industrial "Nothing OS" aesthetics. Features Pomodoro timer, AI-driven task parsing, voice-to-text transcription, and reactive visual design.',
     tech: ['React', 'Vite', 'Framer Motion', 'AI Integration'],
@@ -46,17 +46,6 @@ const PROJECTS = [
     tech: ['Python', 'Genetic Algorithms', 'scikit-learn'],
     icon: Cpu,
     link: 'https://github.com/ghoulraider13-rgb/evolutionary_feature_selection',
-    badge: 'Repo',
-    badgeColor: 'bg-success/15 text-success',
-  },
-  // FloTask AI‑powered task manager
-  {
-    title: 'FloTask',
-    subtitle: 'AI‑Powered Task Manager',
-    description: 'React + Vite + Gemini API; minimalist "Nothing OS" design for task scheduling and voice‑to‑text.',
-    tech: ['React', 'Vite', 'Gemini API'],
-    icon: Cpu,
-    link: 'https://github.com/ghoulraider13-rgb/FloTask',
     badge: 'Repo',
     badgeColor: 'bg-success/15 text-success',
   },

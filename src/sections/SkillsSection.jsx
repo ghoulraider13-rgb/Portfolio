@@ -5,19 +5,23 @@ import BinaryRain from '../components/BinaryRain';
 const SKILL_CATEGORIES = [
   {
     title: "Languages",
-    skills: ["Python", "Java", "C", "JavaScript"]
+    skills: ["Python", "Java", "C", "JavaScript", "SQL", "Bash / Shell"]
+  },
+  {
+    title: "AI & ML",
+    skills: ["Machine Learning", "YOLOv11 (CV)", "PyTorch", "scikit-learn", "Genetic Algorithms", "Gemini LLM", "NLP", "EDA"]
   },
   {
     title: "Web & Full-Stack",
-    skills: ["React", "Next.js", "REST APIs", "HTML / CSS"]
+    skills: ["React", "Next.js", "Vite", "Tailwind CSS", "FastAPI", "Chrome MV3", "REST APIs", "HTML / CSS"]
   },
   {
-    title: "AI & Data",
-    skills: ["Machine Learning", "Gemini LLM", "Jupyter", "SQL"]
+    title: "Edge AI Deployment",
+    skills: ["Ultralytics", "ONNX", "TensorRT", "OpenVINO"]
   },
   {
     title: "Tools & Ecosystem",
-    skills: ["Git / GitHub", "Google Cloud", "VS Code", "Linux / CLI"]
+    skills: ["Git / GitHub", "Docker", "GitHub Actions", "Roboflow", "Google Cloud", "Jupyter", "VS Code", "Linux / CLI"]
   }
 ];
 

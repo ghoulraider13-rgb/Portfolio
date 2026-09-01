@@ -20,10 +20,10 @@ const PROJECTS = [
   {
     title: 'FloTask',
     subtitle: 'Productivity Dashboard',
-    description: 'A comprehensive productivity dashboard with industrial "Nothing OS" aesthetics. Features Pomodoro timer, AI-driven task parsing, voice-to-text transcription, and reactive visual design.',
-    tech: ['React', 'Vite', 'Framer Motion', 'AI Integration'],
+    description: 'A comprehensive productivity dashboard with industrial "Nothing OS" aesthetics. Natural-language task parsing via Gemini Flash, continuous voice dictation, scratchpad draw tool, and a reactive dot-grid background.',
+    tech: ['React', 'Vite', 'PWA', 'Gemini Flash'],
     icon: Layers,
-    link: 'https://flo-task.vercel.app/',
+    link: 'https://flotask-xi.vercel.app/',
     badge: 'Live',
     badgeColor: 'bg-success/15 text-success',
   },

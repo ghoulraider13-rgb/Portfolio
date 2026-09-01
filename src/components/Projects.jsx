@@ -23,7 +23,7 @@ const PROJECTS = [
     tech: ['React', 'Vite', 'Framer Motion', 'AI Integration'],
     icon: Layers,
     gradient: 'from-[#a29bfe]/20 to-[#6c5ce7]/5',
-    link: 'https://flo-task.vercel.app/',
+    link: 'https://flotask-xi.vercel.app/',
     github: null,
   },
 ];

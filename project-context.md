@@ -24,7 +24,7 @@ Core Content & Data
 
     Biography: "Hey, I'm Ashwin Lahkar a 2nd year CSE Undergrad specializing in the fields of artificial intelligence, machine learning and fullstack web development. I'm currently learning about NLM and its integration into software. I'm passionate about learning new things and expanding my repertoire."
 
-    Projects: >     * Flowtask: Must include live link https://flo-task.vercel.app/.
+    Projects: >     * FloTask: Must include live link https://flotask-xi.vercel.app/.
 
         AI-Powered Web App: Uses React, Python, Gemini API (NLM Engine).
 

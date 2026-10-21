@@ -9,7 +9,7 @@ const FEATURED = [
     description: 'A comprehensive productivity dashboard built with industrial "Nothing OS" aesthetics. Features Pomodoro timer, AI-driven task parsing, voice-to-text transcription, and reactive visual design.',
     tech: ['React', 'Vite', 'Framer Motion', 'AI Integration'],
     icon: Layers,
-    link: 'https://flo-task.vercel.app/',
+    link: 'https://flotask-xi.vercel.app/',
     badge: 'Live Link',
     badgeColor: 'bg-success/15 text-success',
   },

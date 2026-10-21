@@ -19,7 +19,7 @@ canvas background, custom glow cursor, binary-rain skill cards, and a dual-pane 
 - **Dual‑pane resume modal** — drag‑and‑drop a resume, live PDF/image preview, metadata pane
 - **Star project – Disaster Detection Drone** highlighted in the Projects section
 - **FloTask** – renamed from Flowtask, now the main productivity dashboard (Live link)
-- Added new project cards: **Sahayak** (privacy‑preserving browser agent), **Evolutionary Feature Selector**, and **FloTask** (AI‑powered task manager)
+- Added new project cards: **Sahayak** (privacy‑preserving browser agent), **Evolutionary Feature Selector**
 - Updated resume PDF (single‑page, new projects, drone as star) linked in the Resume viewer
 - Built with React 19, Vite, Tailwind CSS 4, framer‑motion, lucide‑react icons, react‑router‑dom
 

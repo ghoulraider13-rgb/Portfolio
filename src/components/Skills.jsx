@@ -7,17 +7,21 @@ const SKILL_CATEGORIES = [
     skills: [
       { name: 'Python', level: 90 },
       { name: 'JavaScript', level: 85 },
+      { name: 'TypeScript', level: 80 },
       { name: 'Java', level: 75 },
       { name: 'C', level: 70 },
+      { name: 'Bash/Shell', level: 78 },
     ],
   },
   {
     title: 'Frameworks & Libraries',
     skills: [
       { name: 'React', level: 88 },
-      { name: 'REST APIs', level: 82 },
-      { name: 'NLP', level: 75 },
-      { name: 'EDA', level: 72 },
+      { name: 'Vite', level: 85 },
+      { name: 'Tailwind CSS', level: 84 },
+      { name: 'FastAPI', level: 80 },
+      { name: 'Chrome MV3', level: 75 },
+      { name: 'Docker', level: 78 },
     ],
   },
   {
@@ -25,17 +29,25 @@ const SKILL_CATEGORIES = [
     skills: [
       { name: 'Gemini LLM Integration', level: 85 },
       { name: 'Machine Learning', level: 78 },
-      { name: 'NLP Processing', level: 76 },
-      { name: 'Data Analysis', level: 80 },
+      { name: 'YOLOv11n', level: 80 },
+      { name: 'ONNX', level: 78 },
+      { name: 'TensorRT', level: 75 },
+      { name: 'OpenVINO', level: 73 },
+      { name: 'Roboflow', level: 80 },
     ],
   },
   {
     title: 'Tools & Platforms',
     skills: [
       { name: 'Git / GitHub', level: 90 },
+      { name: 'GitHub CLI (gh)', level: 88 },
       { name: 'Jupyter', level: 85 },
       { name: 'VS Code', level: 92 },
       { name: 'Linux / CLI', level: 78 },
+      { name: 'Docker', level: 78 },
+      { name: 'Tailscale', level: 70 },
+      { name: 'Cloudflare WARP', level: 65 },
+      { name: 'Brave Browser', level: 70 },
     ],
   },
 ];

@@ -38,7 +38,7 @@ function ResumeModal({ isOpen, onClose }) {
               </div>
               <div className="flex-1 rounded-xl overflow-hidden border border-white/[0.04] bg-white/[0.02]">
                 <iframe 
-                  src="/AshwinLahkar_24BTRA0004.pdf#toolbar=0&navpanes=0" 
+                  src="/AshwinLahkar_resume.pdf#toolbar=0&navpanes=0" 
                   className="w-full h-full border-none"
                   title="Resume Preview"
                 />
@@ -67,8 +67,8 @@ function ResumeModal({ isOpen, onClose }) {
               
               <div className="flex flex-col gap-4 mt-auto">
                 <a 
-                  href="/AshwinLahkar_24BTRA0004.pdf" 
-                  download="AshwinLahkar_24BTRA0004_Resume.pdf"
+                  href="/AshwinLahkar_resume.pdf" 
+                  download="AshwinLahkar_Resume.pdf"
                   className="resume-btn-cyber w-full py-4 rounded-xl flex items-center justify-center gap-3 text-accent-bright font-medium tracking-wide group"
                 >
                   <Download size={18} className="group-hover:-translate-y-0.5 transition-transform" /> Download Resume

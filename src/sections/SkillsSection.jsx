@@ -5,23 +5,27 @@ import BinaryRain from '../components/BinaryRain';
 const SKILL_CATEGORIES = [
   {
     title: "Languages",
-    skills: ["Python", "Java", "C", "JavaScript", "SQL", "Bash / Shell"]
-  },
-  {
-    title: "AI & ML",
-    skills: ["Machine Learning", "YOLOv11 (CV)", "PyTorch", "scikit-learn", "Genetic Algorithms", "Gemini LLM", "NLP", "EDA"]
+    skills: ["Python", "Java", "C", "JavaScript", "TypeScript", "Rust"]
   },
   {
     title: "Web & Full-Stack",
-    skills: ["React", "Next.js", "Vite", "Tailwind CSS", "FastAPI", "Chrome MV3", "REST APIs", "HTML / CSS"]
+    skills: ["React", "Next.js", "REST APIs", "HTML / CSS", "Node.js", "Tailwind CSS"]
   },
   {
-    title: "Edge AI Deployment",
-    skills: ["Ultralytics", "ONNX", "TensorRT", "OpenVINO"]
+    title: "AI & Data",
+    skills: ["Machine Learning", "Gemini LLM", "Jupyter", "SQL", "PyTorch", "TensorFlow", "Ultralytics"]
+  },
+  {
+    title: "DevOps & Cloud",
+    skills: ["Docker", "GitHub Actions", "Tailscale", "Cloudflare WARP", "AWS", "Google Cloud"]
   },
   {
     title: "Tools & Ecosystem",
-    skills: ["Git / GitHub", "Docker", "GitHub Actions", "Roboflow", "Google Cloud", "Jupyter", "VS Code", "Linux / CLI"]
+    skills: ["Git / GitHub", "VS Code", "Linux / CLI", "Scoop", "Cua-Driver", "Hermes Agent"]
+  },
+  {
+    title: "Research & Docs",
+    skills: ["LaTeX", "BibTeX", "Overleaf", "Zotero"]
   }
 ];
 

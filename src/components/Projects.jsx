@@ -1,29 +1,73 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Layers, Cpu } from 'lucide-react';
+import { ExternalLink, Layers, Cpu, Globe, Brain, Zap, Shield, Code } from 'lucide-react';
 import GithubIcon from './GithubIcon';
 import RevealOnScroll from './RevealOnScroll';
 
 const PROJECTS = [
   {
-    title: 'AI-Powered Web Application',
-    subtitle: 'Full-Stack NLM Engine',
+    title: 'FloTask',
+    subtitle: 'AI-Powered Productivity Dashboard',
     description:
-      'Engineered a full-stack Natural Language Model engine utilizing "Nothing" design principles. Features optimized state management via component resets, delivering a seamless, intelligent user experience.',
-    tech: ['React', 'Python', 'Gemini API', 'NLP'],
-    icon: Cpu,
+      'Full-featured task manager with natural language parsing (Gemini/NVIDIA Nemotron), Pomodoro timer, enforcer-mode alarms, rich scratchpad with draw tool, sleep & hydration trackers. Built with React 18, Vite, Tailwind, Framer Motion. PWA + native desktop (Tauri) + mobile (Capacitor).',
+    tech: ['React', 'Vite', 'Tailwind', 'Framer Motion', 'Gemini API', 'Nemotron', 'Tauri', 'Capacitor', 'PWA'],
+    icon: Layers,
     gradient: 'from-[#6c5ce7]/20 to-[#a29bfe]/5',
+    link: 'https://flotask-xi.vercel.app/',
+    github: 'https://github.com/ghoulraider13-rgb/FloTask',
+  },
+  {
+    title: 'Actis',
+    subtitle: 'Local-First Filesystem Activity Ledger',
+    description:
+      'CLI-first tool with local SQLite ledger, debounced filesystem watcher (chokidar), natural-language query parser, and plain-Node dashboard (port 7420). Zero external dependencies, ESM, sql.js. Published to npm as `actis`.',
+    tech: ['Node.js', 'TypeScript', 'ESM', 'sql.js', 'chokidar', 'SQLite'],
+    icon: Code,
+    gradient: 'from-[#00d4aa]/20 to-[#34d399]/5',
+    link: 'http://localhost:7420',
+    github: 'https://github.com/ghoulraider13-rgb/Actis',
+  },
+  {
+    title: 'Disaster Detection Drone',
+    subtitle: 'Edge CV for UAV Disaster Assessment',
+    description:
+      'YOLOv11n models for flood, landslide, and earthquake damage detection. ONNX, TensorRT, and OpenVINO optimization for Jetson-class UAV edge deployment. IEEE-style evaluation with mAP/latency benchmarks. Research paper in progress.',
+    tech: ['YOLOv11', 'ONNX', 'TensorRT', 'OpenVINO', 'Python', 'Roboflow', 'Jetson'],
+    icon: Globe,
+    gradient: 'from-[#ef4444]/20 to-[#f87171]/5',
+    link: null,
+    github: 'https://github.com/ghoulraider13-rgb/Disaster_DetectionDrone',
+  },
+  {
+    title: 'Sahayak',
+    subtitle: 'Privacy-Preserving Browser Agent (SIH 2026)',
+    description:
+      'Chrome MV3 extension + FastAPI backend for privacy-preserving web task automation. PII redaction engine achieving 1.00 recall / 1.00 precision on adversarial tests. ISRO Problem Statement 26171 — internal round build.',
+    tech: ['Chrome MV3', 'FastAPI', 'Python', 'PII Redaction', 'Privacy'],
+    icon: Shield,
+    gradient: 'from-[#34d399]/20 to-[#10b981]/5',
     link: null,
     github: null,
   },
   {
-    title: 'Flo-Task',
-    subtitle: 'Productivity Dashboard',
+    title: 'Evolutionary Feature Selector',
+    subtitle: 'Genetic Algorithm for ML Optimization',
     description:
-      'A comprehensive productivity dashboard built with industrial "Nothing OS" aesthetics. Features Pomodoro timer, AI-driven task parsing, voice-to-text transcription, and reactive visual design.',
-    tech: ['React', 'Vite', 'Framer Motion', 'AI Integration'],
-    icon: Layers,
-    gradient: 'from-[#a29bfe]/20 to-[#6c5ce7]/5',
-    link: 'https://flo-task.vercel.app/',
+      'Genetic algorithm reduces feature set by 50% while raising RandomForest accuracy from 97.1% to 99.4% on breast-cancer dataset. Demonstrates evolutionary computation for automated feature engineering.',
+    tech: ['Python', 'Genetic Algorithms', 'scikit-learn', 'RandomForest', 'Optimization'],
+    icon: Brain,
+    gradient: 'from-[#f59e0b]/20 to-[#fbbf24]/5',
+    link: null,
+    github: null,
+  },
+  {
+    title: 'Hermes Agent Skills',
+    subtitle: 'AI Agent Tooling & Workflow Automation',
+    description:
+      'Authored and maintain 20+ skills for Hermes Agent (Nous Research): autonomous coding agents (Claude Code, Codex, OpenCode), desktop automation, web scraping, research tools, media processing, and dev tooling. Used in production agent workflows.',
+    tech: ['TypeScript', 'Node.js', 'MCP', 'CDP', 'AI Agents', 'Automation'],
+    icon: Zap,
+    gradient: 'from-[#8b5cf6]/20 to-[#a78bfa]/5',
+    link: 'https://hermes-agent.nousresearch.com/docs',
     github: null,
   },
 ];
@@ -97,11 +141,11 @@ export default function Projects() {
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-pure mb-4 tracking-tight">Featured Projects</h2>
           <p className="text-mist text-[15px] max-w-lg mb-16">
-            Selected projects that showcase my expertise in full-stack development and AI integration.
+            Selected projects showcasing expertise in full-stack development, AI/ML, edge computing, and developer tooling.
           </p>
         </RevealOnScroll>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PROJECTS.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}

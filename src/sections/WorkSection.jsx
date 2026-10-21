@@ -16,7 +16,7 @@ const PROJECTS = [
     badge: 'Star',
     badgeColor: 'bg-accent/15 text-accent-bright',
   },
-  // FloTask – live productivity dashboard
+  // Existing FloTask (formerly Flowtask)
   {
     title: 'FloTask',
     subtitle: 'Productivity Dashboard',

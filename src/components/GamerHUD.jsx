@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, memo } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 /*
   Gamer HUD — displays "player stats" like a game overlay.

@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, memo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 /*
   Interactive Terminal — simulates a hacker/dev terminal with typewriter effect.

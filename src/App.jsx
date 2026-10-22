@@ -143,7 +143,7 @@ export default function App() {
       {/* Main Content */}
       {!showSplash && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.1 }}>
-          <TopNav onOpenResume={() => setIsResumeOpen(true)} />
+          <TopNav onOpenResume={() => setIsResumeOpen(true)} onOpenTerminal={() => setIsTerminalOpen(true)} />
           <HomeSection onOpenResume={() => setIsResumeOpen(true)} />
           <AboutSection />
           <WorkSection />
@@ -154,6 +154,9 @@ export default function App() {
           <footer className="w-full flex flex-col items-center justify-center text-center py-10 pb-16 border-t border-white/[0.04] bg-deep/30">
             <p className="text-snow text-sm font-medium tracking-wide mb-2">Built with React, Tailwind CSS & Framer Motion — Ashwin Lahkar © 2026</p>
             <p className="text-ash text-xs font-mono tracking-widest">//constantly learning and innovating</p>
+            <p className="text-accent/50 text-xs font-mono tracking-widest mt-2">
+              Press Ctrl+Shift+T for the terminal • or click the ⌨ icon up top
+            </p>
           </footer>
 
           <ResumeModal isOpen={isResumeOpen} onClose={() => setIsResumeOpen(false)} />

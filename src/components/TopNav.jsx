@@ -1,5 +1,6 @@
 import { useState, useEffect, memo } from 'react';
 import { motion } from 'framer-motion';
+import { TerminalSquare } from 'lucide-react';
 
 const LINKS = [
   { label: 'About', to: 'about' },
@@ -38,7 +39,7 @@ function LiveClock() {
   );
 }
 
-function TopNav({ onOpenResume }) {
+function TopNav({ onOpenResume, onOpenTerminal }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -81,6 +82,15 @@ function TopNav({ onOpenResume }) {
             </button>
           ))}
           <button
+            onClick={onOpenTerminal}
+            title="Open terminal (Ctrl+Shift+T)"
+            aria-label="Open interactive terminal"
+            className="p-2.5 rounded-xl border border-white/[0.1] bg-white/[0.03] text-mist hover:text-accent-bright hover:border-accent/30 transition-colors inline-flex items-center justify-center"
+            data-hover
+          >
+            <TerminalSquare size={17} />
+          </button>
+          <button
             onClick={onOpenResume}
             style={{ padding: '10px 28px', fontSize: '14px' }}
             className="resume-btn-cyber ml-2 rounded-xl font-bold text-accent-bright uppercase tracking-widest inline-flex items-center gap-2 whitespace-nowrap"
@@ -90,13 +100,13 @@ function TopNav({ onOpenResume }) {
           </button>
         </div>
 
-        <MobileMenu links={LINKS} scrollTo={scrollTo} onOpenResume={onOpenResume} />
+        <MobileMenu links={LINKS} scrollTo={scrollTo} onOpenResume={onOpenResume} onOpenTerminal={onOpenTerminal} />
       </div>
     </motion.nav>
   );
 }
 
-function MobileMenu({ links, scrollTo, onOpenResume }) {
+function MobileMenu({ links, scrollTo, onOpenResume, onOpenTerminal }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="sm:hidden">
@@ -110,6 +120,12 @@ function MobileMenu({ links, scrollTo, onOpenResume }) {
           {links.map((l) => (
             <button key={l.to} onClick={() => { scrollTo(l.to); setOpen(false); }} className="text-sm text-mist hover:text-pure text-left uppercase tracking-wide">{l.label}</button>
           ))}
+          <button
+            onClick={() => { onOpenTerminal(); setOpen(false); }}
+            className="text-sm text-mist hover:text-accent-bright text-left uppercase tracking-wide flex items-center gap-2"
+          >
+            <TerminalSquare size={14} /> Terminal
+          </button>
           <button
             onClick={() => { onOpenResume(); setOpen(false); }}
             className="text-sm text-accent hover:text-accent-bright text-left uppercase tracking-wide mt-2 pt-2 border-t border-white/5"

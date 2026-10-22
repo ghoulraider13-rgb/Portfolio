@@ -3,7 +3,7 @@ import { GraduationCap, BookOpen } from 'lucide-react';
 import RevealOnScroll from '../components/RevealOnScroll';
 import BinaryRain from '../components/BinaryRain';
 
-const COURSEWORK = ['Cloud DevOps', 'Agile Methodologies', 'MLOps', 'Automation in SWE', 'Advanced AI', 'Research Methodology'];
+const COURSEWORK = ['Cloud DevOps', 'MLOps', 'Advanced AI', 'Automation in SWE', 'DSA', 'OOP', 'DBMS', 'Machine Learning'];
 
 function AboutSection() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -63,6 +63,8 @@ function AboutSection() {
                       <span className="glow-text font-medium">2024 – 2028</span>
                       <span className="text-ash mx-2">•</span>
                       <span className="glow-text font-medium">5th Semester (Year 3)</span>
+                      <span className="text-ash mx-2">•</span>
+                      <span className="glow-text font-medium">CGPA 9.2/10</span>
                     </p>
                     <p className="text-ash text-xs font-mono mt-2">Bengaluru, Karnataka</p>
                   </div>

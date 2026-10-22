@@ -3,7 +3,7 @@ import { GraduationCap, BookOpen } from 'lucide-react';
 import RevealOnScroll from '../components/RevealOnScroll';
 import BinaryRain from '../components/BinaryRain';
 
-const COURSEWORK = ['DSA', 'OOP', 'DBMS', 'Machine Learning'];
+const COURSEWORK = ['Cloud DevOps', 'Agile Methodologies', 'MLOps', 'Automation in SWE', 'Advanced AI', 'Research Methodology'];
 
 function AboutSection() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -32,7 +32,7 @@ function AboutSection() {
                   <span className="w-1.5 h-1.5 rounded-full bg-accent" /> Biography
                 </h3>
                 <p className="text-snow text-[15px] leading-[1.85]">
-                  Hey, I'm Ashwin Lahkar a 2nd year CSE Undergrad specializing in the fields of artificial intelligence, machine learning and fullstack web development. I'm currently learning about NLM and it's integration into software I'm passionate about learning new things and expanding my repertoire
+                  Hey, I'm Ashwin Lahkar a 3rd year CSE Undergrad specializing in the fields of artificial intelligence, machine learning and fullstack web development. I'm currently learning about NLM and it's integration into software I'm passionate about learning new things and expanding my repertoire
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ function AboutSection() {
                     <p className="text-snow text-xs mt-2.5">
                       <span className="glow-text font-medium">2024 – 2028</span>
                       <span className="text-ash mx-2">•</span>
-                      <span className="glow-text font-medium">4th Semester (Year 2)</span>
+                      <span className="glow-text font-medium">5th Semester (Year 3)</span>
                     </p>
                     <p className="text-ash text-xs font-mono mt-2">Bengaluru, Karnataka</p>
                   </div>

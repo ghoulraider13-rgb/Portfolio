@@ -27,6 +27,17 @@ const PROJECTS = [
     badge: 'Live',
     badgeColor: 'bg-success/15 text-success',
   },
+  // Actis – published npm package
+  {
+    title: 'Actis',
+    subtitle: 'Local-First Filesystem Activity Ledger',
+    description: 'CLI-first tool with local SQLite ledger, debounced filesystem watcher (chokidar), natural-language query parser, and plain-Node dashboard (port 7420). Zero external dependencies, ESM, sql.js. Published to npm as `actis`.',
+    tech: ['Node.js', 'TypeScript', 'ESM', 'sql.js', 'chokidar', 'SQLite'],
+    icon: Cpu,
+    link: 'https://github.com/ghoulraider13-rgb/Actis',
+    badge: 'npm',
+    badgeColor: 'bg-success/15 text-success',
+  },
   // Sahayak privacy-preserving browser agent
   {
     title: 'Sahayak',

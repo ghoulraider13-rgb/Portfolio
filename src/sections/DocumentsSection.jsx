@@ -17,7 +17,7 @@ function DocumentsSection() {
 
         <RevealOnScroll delay={0.1}>
           <a
-            href="/ashwin_lahkar_resume.pdf"
+            href="/AshwinLahkar_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
@@ -38,7 +38,7 @@ function DocumentsSection() {
                     View Resume
                   </h3>
                   <p className="text-ash text-xs font-mono mt-1">
-                    ashwin_lahkar_resume.pdf • Updated April 2026
+                    AshwinLahkar_resume.pdf • Updated October 2026
                   </p>
                 </div>
               </div>

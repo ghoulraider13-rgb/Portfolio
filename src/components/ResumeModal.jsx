@@ -34,7 +34,7 @@ function ResumeModal({ isOpen, onClose }) {
             <div className="flex-1 h-[60vh] md:h-[80vh] bg-black/30 border-b md:border-b-0 md:border-r border-white/[0.06] p-4 flex flex-col">
               <div className="flex items-center gap-2 mb-3 text-mist text-sm font-mono tracking-wide px-2">
                 <FileText size={16} className="text-accent" />
-                <span>/AshwinLahkar_24BTRA0004.pdf</span>
+                <span>/AshwinLahkar_resume.pdf</span>
               </div>
               <div className="flex-1 rounded-xl overflow-hidden border border-white/[0.04] bg-white/[0.02]">
                 <iframe 

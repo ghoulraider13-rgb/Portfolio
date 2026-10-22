@@ -4,7 +4,7 @@ import { FileText, Upload, X, CheckCircle, AlertCircle } from 'lucide-react';
 import RevealOnScroll from '../components/RevealOnScroll';
 
 const INITIAL_RESUME = {
-  name: 'ashwin_lahkar_resume.pdf',
+  name: 'AshwinLahkar_resume.pdf',
   size: '245 KB',
   updated: 'April 2026',
 };

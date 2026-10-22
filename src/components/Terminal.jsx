@@ -59,6 +59,9 @@ function Terminal({ isOpen, onClose, onCommand }) {
     }
   }, [isOpen]);
 
+  // Unmount entirely when closed (must come AFTER all hooks — conditional return)
+  if (!isOpen) return null;
+
   const runStartupSequence = async () => {
     isAnimatingRef.current = true;
     for (let i = 0; i < TERMINAL_LINES.length; i++) {
@@ -243,7 +246,7 @@ function Terminal({ isOpen, onClose, onCommand }) {
           <span className="text-ash text-xs font-terminal ml-2">terminal.ashwin.dev</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-ash text-xs font-terminal">F12 to toggle</span>
+          <span className="text-ash text-xs font-terminal">Ctrl+Shift+T to toggle</span>
           <button
             onClick={onClose}
             className="p-1.5 text-ash hover:text-danger transition-colors rounded"

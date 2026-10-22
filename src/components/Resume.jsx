@@ -4,7 +4,7 @@ import { FileText, Upload, Trash2, Download, CheckCircle, AlertCircle } from 'lu
 import RevealOnScroll from './RevealOnScroll';
 
 const INITIAL_RESUME = {
-  name: 'AshwinLahkar_Resume.pdf',
+  name: 'Ashwin_Lahkar_Resume.pdf',
   size: '245 KB',
   updated: 'April 2026',
 };
